@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <link rel="stylesheet" href="Reg.css">
+</head>
+<body>
+    <h2>UNEB Candidate Registration Form</h2>
+
+<form action="submit.php" method="post">
+
+    <!-- Question c: Form validation (required fields) -->
+    <label>Full Name:</label><br>
+    <input type="text" name="fullname" required><br><br>
+
+    <!-- Question c: Form validation (pattern for index) -->
+    <label>UNEB Index Number (Format: 123456/001):</label><br>
+    <input type="text" name="index" required 
+           pattern="[0-9]{6}/[0-9]{3}" 
+           title="Format should be 123456/001"><br><br>
+
+    <!-- Question c: Form validation (no future date) -->
+    <label>Date of Birth:</label><br>
+    <input type="date" name="dob" required max="2025-12-07"><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="Male" required> Male
+    <input type="radio" name="gender" value="Female" required> Female <br><br>
+
+    <!-- Question c: Form validation (required selection) -->
+    <label>School/Center Name:</label><br>
+    <select name="center" required>
+        <option value="">-- Select School/Center --</option>
+        <option>Makerere College School</option>
+        <option>Namilyango College</option>
+        <option>Gayaza High School</option>
+        <option>Kawempe Muslim Secondary </option>
+        <option>Mbogo Mixed Secondary School</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit Registration">
+</form>
+
+<br>
+<!-- UNEB website button opens new tab -->
+<a href="https://uneb.ac.ug" target="_blank">
+    <button>UNEB SITE</button>
+</a>
+
+</body>
+</html>
